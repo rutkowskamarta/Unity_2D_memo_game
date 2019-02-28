@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222753841773142610}
   - component: {fileID: 114775269536602864}
   - component: {fileID: 114256956494466138}
+  - component: {fileID: 114940008873739384}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -66,9 +67,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
+    m_DisabledColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -84,7 +85,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114775269536602864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114940008873739384}
+        m_MethodName: SetProperTexture
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114753731634807150
@@ -149,6 +161,27 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114940008873739384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904021833854716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e550a11f225ece49b51a0e61a2f6f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 21300000, guid: e77f94b3f32726441b1a20550fc2c956, type: 3}
+  - {fileID: 21300000, guid: 5b099addc741b2148b7538cc0b47b976, type: 3}
+  - {fileID: 21300000, guid: 32e8d3ccfd1ff88488c2c3f548185ef5, type: 3}
+  - {fileID: 21300000, guid: 4cef44b135b2c754fbf18a624f8a5c5b, type: 3}
+  - {fileID: 21300000, guid: 86c0928c43d3e3644be5a78198ce613c, type: 3}
+  - {fileID: 21300000, guid: 995f23096b8f9dd4396c572981b5648c, type: 3}
+  - {fileID: 21300000, guid: 68e74b3c47abdab4c83fbb9bd488bea8, type: 3}
+  - {fileID: 21300000, guid: b86c3d0913eda1d4a929f49c549cbedb, type: 3}
+  reverse: {fileID: 21300000, guid: 98927b63de17d0c41b6d595e5ee13482, type: 3}
 --- !u!222 &222228835729540014
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -179,7 +212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -40}
+  m_AnchoredPosition: {x: -258.9, y: -40}
   m_SizeDelta: {x: 72, y: 96}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &224637770974371862

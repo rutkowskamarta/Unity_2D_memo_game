@@ -12,7 +12,6 @@ public class CardGenerator : MonoBehaviour {
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private Vector2 spaceBetweenCards;
 
-    //private CardBehaviour[,] cards;
 
     private List<int> cardNumbers;
 
@@ -27,7 +26,6 @@ public class CardGenerator : MonoBehaviour {
         elementsInHeight = BoardParamsScript.Height;
         elementsInWidth = BoardParamsScript.Width;
 
-        //cards = new CardBehaviour[elementsInWidth, elementsInHeight];
         FillNumberList();
         cardNumbers = cardNumbers.OrderBy(a => Random.value).ToList();
         FillBoardWithCards();
@@ -57,7 +55,6 @@ public class CardGenerator : MonoBehaviour {
                 GameObject newCard = Instantiate(cardPrefab, transform) as GameObject;
                 newCard.transform.localPosition = spawnCoordinate;
                 newCard.GetComponent<CardBehaviour>().cardId = cardNumbers[counter];
-                //newCard.GetComponent<CardBehaviour>().SetProperTexture();
                 spawnCoordinate.x += cardSize.x + spaceBetweenCards.x;
 
                 counter++;

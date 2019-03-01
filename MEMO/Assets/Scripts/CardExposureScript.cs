@@ -12,6 +12,7 @@ public class CardExposureScript : MonoBehaviour, IBoardEventHandler{
 
     [SerializeField] private float revealTime = 1f;
 
+
     private GameObject firstCardRevealed  = null;
     private GameObject secondCardRevealed  = null;
     public bool AreBothRevealed  = false;
@@ -52,6 +53,8 @@ public class CardExposureScript : MonoBehaviour, IBoardEventHandler{
     {
         firstCardRevealed.GetComponent<CardBehaviour>().HideCard();
         secondCardRevealed.GetComponent<CardBehaviour>().HideCard();
+        ExecuteEvents.Execute<IScoreEventHandler>(gameObject, null, (x, y) => x.Score(false));
+
 
     }
 
@@ -59,6 +62,8 @@ public class CardExposureScript : MonoBehaviour, IBoardEventHandler{
     {
         Destroy(firstCardRevealed);
         Destroy(secondCardRevealed);
+        ExecuteEvents.Execute<IScoreEventHandler>(gameObject, null, (x, y) => x.Score(true));
+
     }
 
 }
